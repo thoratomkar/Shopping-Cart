@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Stylesheet.css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            color: #FFCC00;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div id="Main">
+        <div id="Header"><h2 style="background-color: #003366"><a id="logo" href="Home.aspx">
+            <img id="logo" 
+                src="Images/download%20(2).jpg" height="75px"/></a><span class="style1">Best Price Guaranteed!</span><br/>
+           <a id="log" href="Login.aspx">Login</a><a id="log" href="Register.aspx">Register</a></h2>
+        </div>
+        <div id="NavBar">
+            <asp:Panel ID="PanelNavBar" runat="server">
+                <a href="Home.aspx">Home</a><a href="mobiles.aspx">Mobiles</a><a href="tv.aspx">Television</a> <a href="laptops.aspx">Laptops</a><a href="AboutUs.aspx">About Us</a><a href="Contact.aspx">Contact</a>
+            </asp:Panel>
+        </div>
+        <div id="Content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div>
+        <div id="Footer">MKV Web Technologies 2015.</div>
+    </div>
+    </form>
+</body>
+</html>
